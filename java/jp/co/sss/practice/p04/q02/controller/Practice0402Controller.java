@@ -15,8 +15,14 @@ public class Practice0402Controller {
 	
 	@RequestMapping(path="/favorite/result",method = RequestMethod.POST)
 	public String san(FavoriteForm favoriteForm) {
-		System.out.println("==POSTメソッドで受け取りました");
-		System.out.println("==パラメータの値:"+favoriteForm);
-		return "practice04/02/post_result";
-}
+		System.out.println("==パラメータを受け取りました");
+		System.out.println("==果物:"+favoriteForm.getFruit());
+		System.out.println("==スナック:"+favoriteForm.getSnack());
+		System.out.println("==スイーツ:"+favoriteForm.getSweet());
+		System.out.println("==おかず:"+favoriteForm.getSidedish());
+		
+		return "practice04/02/favorite_result";
+	}
+	
+
 }
